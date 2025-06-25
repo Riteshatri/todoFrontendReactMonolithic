@@ -99,7 +99,15 @@ const API_BASE_URL = 'http://<backend-vm-public-ip>:8000/api';
 ```javascript
 const API_BASE_URL = 'http://<frontend-vm-public-ip>/api';
 ```
+### Install & Configure NGINX on vm
 
+```bash
+sudo su
+sudo apt update
+sudo apt install nginx -y
+systemctl enable nginx
+systemctl start nginx
+```
 ---
 
 ### Step 4: Install & Build Frontend
@@ -201,9 +209,11 @@ const API_BASE_URL = 'http://<frontend-vm-public-ip>/api';
 ### (Optional) Install & Configure NGINX (for Private IP)
 These all steps should be followed into our vm...
 ```bash
-sudo apt update
-sudo apt install nginx -y
-sudo nano /etc/nginx/sites-available/default
+sudo su
+apt update
+apt install nginx -y
+systemctl enable nginx
+systemctl start nginx
 ```
 
 ### 🔄 Insert Proxy Configuration 🔥

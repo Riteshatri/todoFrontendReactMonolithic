@@ -184,6 +184,14 @@ Then update:
 ```javascript
 const API_BASE_URL = 'http://<backend-vm-public-ip>:8000/api';
 ```
+### Install & Configure NGINX into our frontend vm...
+
+```bash
+sudo apt update
+sudo apt install nginx -y
+sudo nano /etc/nginx/sites-available/default
+```
+
 
 ### Step 3.b:👉 Private IP with NGINX:
 ```javascript
